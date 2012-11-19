@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>uk.org.sappho.pom</groupId>
+        <artifactId>sappho-maven</artifactId>
+        <version>6</version>
+    </parent>
+
+    <groupId>uk.me.json.site</groupId>
+    <artifactId>json-me-uk</artifactId>
+    <packaging>war</packaging>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>json.me.uk</name>
+
+    <scm>
+        <connection>scm:git:ssh://git@git.sappho.org.uk:7999/SITES/json.me.uk.git</connection>
+        <developerConnection>scm:git:ssh://git@git.sappho.org.uk:7999/SITES/json.me.uk.git</developerConnection>
+        <url>https://git.sappho.org.uk/projects/SITES</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License, version 3</name>
+            <url>http://www.gnu.org/licenses/gpl.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>andrewheald</id>
+            <name>Andrew Heald</name>
+            <roles>
+                <role>Developer and build Manager</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <version.jersey>1.15</version.jersey>
+        <version.gson>2.2.2</version.gson>
+        <version.freemarker>2.3.19</version.freemarker>
+        <version.servlet.api>2.5</version.servlet.api>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${version.jersey}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-bundle</artifactId>
+            <version>${version.jersey}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${version.gson}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${version.servlet.api}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${version.freemarker}</version>
+        </dependency>
+    </dependencies>
+
+</project>
